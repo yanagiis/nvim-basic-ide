@@ -54,7 +54,9 @@ return packer.startup(function(use)
   use { "gpanders/editorconfig.nvim" }
 
   -- Colorschemes
-  use { "folke/tokyonight.nvim" }
+  use { "marko-cerovac/material.nvim" }
+  use { "sainnhe/sonokai" }
+  use { "yazeed1s/minimal.nvim" }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp" } -- The completion plugin
