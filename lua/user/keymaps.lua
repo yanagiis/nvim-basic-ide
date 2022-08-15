@@ -17,10 +17,10 @@ vim.g.mapleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<leader>wh", "<C-w>h", opts)
+keymap("n", "<leader>wj", "<C-w>j", opts)
+keymap("n", "<leader>wk", "<C-w>k", opts)
+keymap("n", "<leader>wl", "<C-w>l", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -57,9 +57,13 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>f/", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fg", ":Telescope grep_string()<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>fm", ":Telescope marks<CR>", opts)
+keymap("n", "<leader>fq", ":Telescope quickfix<CR>", opts)
+keymap("n", "<leader>fk", ":Telescope keymaps<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
@@ -78,3 +82,16 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- Hop
+keymap("n", "<leader><space>w", ":HopWord<CR>", opts)
+keymap("n", "<leader><space>b", ":HopWord<CR>", opts)
+keymap("n", "<leader><space>c", ":HopChar1<CR>", opts)
+
+-- EasyAlign
+keymap("x", "<leader>aa", ":EasyAlign<CR>", opts)
+
+-- Trouble
+keymap("n", "<leader>tt", ":TroubleToggle<CR>", opts)
+keymap("n", "<leader>td", ":TroubleToggle document_diagnostics<CR>", opts)
+keymap("n", "<leader>tw", ":TroubleToggle workspace_diagnostics<CR>", opts)

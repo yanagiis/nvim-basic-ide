@@ -23,7 +23,7 @@ M.setup = function()
   end
 
   local config = {
-    virtual_text = false, -- disable virtual text
+    virtual_text = true, -- disable virtual text
     signs = {
       active = signs, -- show signs
     },
@@ -77,6 +77,10 @@ M.on_attach = function(client, bufnr)
   end
 
   if client.name == "sumneko_lua" then
+    client.resolved_capabilities.document_formatting = false
+  end
+
+  if client.name == "gopls" then
     client.resolved_capabilities.document_formatting = false
   end
 

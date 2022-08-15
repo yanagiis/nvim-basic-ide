@@ -39,7 +39,7 @@ end
 
 lualine.setup {
   options = {
-    globalstatus = true,
+    globalstatus = false,
     icons_enabled = true,
     theme = "auto",
     component_separators = { left = "", right = "" },

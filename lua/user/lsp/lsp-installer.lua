@@ -12,6 +12,16 @@ local servers = {
   "bashls",
   "jsonls",
   "yamlls",
+  "clangd",
+  "cmake",
+  "dockerls",
+  "esbonio",
+  "golangci_lint_ls",
+  "gopls",
+  "jsonnet_ls",
+  "rust_analyzer",
+  "sqlls",
+  "svelte",
 }
 
 lsp_installer.setup()
