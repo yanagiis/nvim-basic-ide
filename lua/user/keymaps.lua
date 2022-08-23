@@ -95,3 +95,6 @@ keymap("x", "<leader>aa", ":EasyAlign<CR>", opts)
 keymap("n", "<leader>tt", ":TroubleToggle<CR>", opts)
 keymap("n", "<leader>td", ":TroubleToggle document_diagnostics<CR>", opts)
 keymap("n", "<leader>tw", ":TroubleToggle workspace_diagnostics<CR>", opts)
+
+-- LSP
+keymap("n", "<leader>lo", ":Vista!!<CR>", opts)
