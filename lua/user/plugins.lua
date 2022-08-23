@@ -76,6 +76,7 @@ return packer.startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
   use { "RRethy/vim-illuminate" }
   use { "folke/trouble.nvim", config = function() require("trouble").setup {} end }
+  use { "liuchengxu/vista.vim" }
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim" }
