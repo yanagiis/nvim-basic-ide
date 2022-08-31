@@ -26,6 +26,7 @@ null_ls.setup {
     formatting.shfmt,
     formatting.prettierd.with({ extra_filetypes = { "svelte" } }),
     formatting.pg_format,
+    formatting.rustfmt,
 
     diagnostics.hadolint,
     diagnostics.shellcheck,
