@@ -1,4 +1,16 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+local status_ok, mason = pcall(require, "mason")
+
+mason.setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+
+local status_ok, mason_lsp = pcall(require, "mason-lspconfig")
 if not status_ok then
   return
 end
@@ -24,7 +36,10 @@ local servers = {
   "svelte",
 }
 
-lsp_installer.setup()
+mason_lsp.setup({
+    ensure_installed = servers,
+    automatic_installation = false,
+})
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then

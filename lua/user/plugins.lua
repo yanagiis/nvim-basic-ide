@@ -71,10 +71,10 @@ return packer.startup(function(use)
   use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
   -- LSP
+  use { "williamboman/mason.nvim" } -- manage external editor tooling such as LSP servers, DAP servers, linters, and formatters through a single interface
+  use { "williamboman/mason-lspconfig" } -- extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
   use { "neovim/nvim-lspconfig" } -- enable LSP
-  use { "williamboman/nvim-lsp-installer" } -- simple to use language server installer
   use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
-  -- use { "RRethy/vim-illuminate" }
   use { "folke/trouble.nvim", config = function() require("trouble").setup {} end }
   use { "liuchengxu/vista.vim" }
 
@@ -91,7 +91,6 @@ return packer.startup(function(use)
   -- DAP
   use { "mfussenegger/nvim-dap" }
   use { "rcarriga/nvim-dap-ui" }
-  use { "ravenxrz/DAPInstall.nvim" }
 
   -- Comment
   use { 'folke/todo-comments.nvim' }
