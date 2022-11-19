@@ -97,4 +97,4 @@ keymap("n", "<leader>td", ":TroubleToggle document_diagnostics<CR>", opts)
 keymap("n", "<leader>tw", ":TroubleToggle workspace_diagnostics<CR>", opts)
 
 -- LSP
-keymap("n", "<leader>lo", ":Vista!!<CR>", opts)
+keymap("n", "<leader>lo", ":SymbolsOutline<CR>", opts)

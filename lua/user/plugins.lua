@@ -76,7 +76,6 @@ return packer.startup(function(use)
   use { "neovim/nvim-lspconfig" } -- enable LSP
   use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
   use { "folke/trouble.nvim", config = function() require("trouble").setup {} end }
-  use { "liuchengxu/vista.vim" }
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim" }
@@ -111,4 +110,5 @@ return packer.startup(function(use)
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
+	use { "simrat39/symbols-outline.nvim" }
 end)
