@@ -73,6 +73,7 @@ return packer.startup(function(use)
 	-- LSP
 	use { "williamboman/mason.nvim" } -- manage external editor tooling such as LSP servers, DAP servers, linters, and formatters through a single interface
 	use { "williamboman/mason-lspconfig" } -- extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+  	use { "jayp0521/mason-nvim-dap.nvim" }
 	use { "neovim/nvim-lspconfig" } -- enable LSP
 	use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
 	use { "folke/trouble.nvim", config = function() require("trouble").setup {} end }

@@ -8,14 +8,15 @@ if not dap_ui_status_ok then
   return
 end
 
-local dap_install_status_ok, dap_install = pcall(require, "dap-install")
-if not dap_install_status_ok then
+local mason_nvim_dap_ok, mason_dap = pcall(require, "mason-nvim-dap")
+if not mason_nvim_dap_ok then
   return
 end
 
-dap_install.setup {}
+mason_dap.setup({
+    ensure_installed = { "bash-debug-adapter", "cpptools", "delve", "go-debug-adapter" }
+})
 
-dap_install.config("python", {})
 -- add other configs here
 
 dapui.setup {
